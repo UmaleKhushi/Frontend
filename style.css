@@ -1,0 +1,194 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  overflow-x: hidden;
+  background: black;
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  padding: 15px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInLeft 1.5s ease forwards 1s;
+}
+
+.logo-icon {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-family: "Lucida Calligraphy", cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f97316; 
+  text-shadow: 0 0 4px rgba(200, 120, 0, 0.9); 
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li {
+  opacity: 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+nav ul li:hover {
+  color: orange;
+}
+
+
+.hero {
+  height: 100vh;
+  background: url("moon2.png") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeBg 2s ease forwards;
+}
+
+@keyframes fadeBg {
+  to { opacity: 1; }
+}
+
+
+.hero-content h1 {
+  font-family: "Times New Roman", serif;
+  font-size: 4.2rem;
+  text-align: center;
+  text-shadow: 0 0 7px rgba(255, 165, 0, 0.7); 
+  line-height: 1.3;
+  color: white;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideInRight 1.5s ease forwards 2s, float 3s ease-in-out infinite alternate 3s;
+}
+
+
+
+@keyframes slideInLeft {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-15px); }
+}
+
+.upload-section {
+  height: 100vh;
+  background: black; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
+}
+
+.upload-img {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.upload-img:hover {
+  transform: scale(1.2);
+}
+
+.upload-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 165, 0, 0.7);
+}
+
+
+.file-name {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: #f97316;
+}
+
+
+.progress-container {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin-top: 15px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, orange, darkorange);
+  transition: width 0.3s ease;
+}
+
+
+.upload-message {
+  margin-top: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: limegreen;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
