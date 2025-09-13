@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lunaris</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo" class="logo-icon">
+      <span class="logo-text">Lunaris</span>
+    </div>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Methodology</li>
+        <li>Results</li>
+        <li>Download</li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>
+        Novel Method to Detect <br>
+        Landslides & Boulders <br>
+        on the Moon
+      </h1>
+    </div>
+  </section>
+
+  <section class="upload-section">
+    <div class="upload-container">
+  
+      <label for="fileInput" class="upload-icon">
+        <img src="upload.png" alt="Upload" class="upload-img">
+      </label>
+      
+      <input type="file" id="fileInput" hidden>
+  
+      <p class="upload-text">Upload Image</p>
+  
+      <p id="fileName" class="file-name"></p>
+
+  
+
+
+<div id="progressContainer" class="progress-container" style="display: none;">
+  <div id="progressBar" class="progress-bar"></div>
+</div>
+
+
+<p id="uploadMessage" class="upload-message"></p>
+
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
